@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Formation Platform</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script> <!-- Si besoin de jQuery-migrate -->
+
+    <script defer src="src/vendor/jquery/jquery.min.js"></script>
+    <!-- <script defer src="src/assets/js/isotope.min.js"></script> -->
+
+
+
+    <script defer src="src/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ 
+    <script defer src="src/assets/js/owl-carousel.js"></script>
+ 
+    <script defer src="src/assets/js/tabs.js"></script>
+    <script defer src="src/assets/js/swiper.js"></script>
+    <script defer src="src/assets/js/custom.js"></script>
+    <script defer>
+      var interleaveOffset = 0.5;
+
+    var swiperOptions = {
+      loop: true,
+      speed: 1000,
+      grabCursor: true,
+      watchSlidesProgress: true,
+      mousewheelControl: true,
+      keyboardControl: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        progress: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            var slideProgress = swiper.slides[i].progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            swiper.slides[i].querySelector(".slide-inner").style.transform =
+              "translate3d(" + innerTranslate + "px, 0, 0)";
+          }      
+        },
+        touchStart: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = "";
+          }
+        },
+        setTransition: function(speed) {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = speed + "ms";
+            swiper.slides[i].querySelector(".slide-inner").style.transition =
+              speed + "ms";
+          }
+        }
+      }
+    };
+
+    var swiper = new Swiper(".swiper-container", swiperOptions);
+  </script>
+<!-- CSS de Bootstrap -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+
+<!-- JS de Bootstrap -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pzjw8f+ua7Kw1TIq0hPGRbP9BqD3XHgtjFfCj3cF1rfEczG7BXrhR4aTpT3b5jwT"
+  crossorigin="anonymous"
+></script>
+
+
+  </body>
+</html>

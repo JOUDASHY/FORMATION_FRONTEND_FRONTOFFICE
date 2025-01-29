@@ -1,0 +1,51 @@
+{
+  "name": "react-vite-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@bitnoi.se/react-scheduler": "^0.3.1",
+    "@fileforge/react-print": "^0.1.149",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
+    "@fullcalendar/timegrid": "^6.1.15",
+    "@stripe/react-stripe-js": "^2.9.0",
+    "@stripe/stripe-js": "^4.10.0",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "emailjs-com": "^3.2.0",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.7.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-google-recaptcha": "^3.1.0",
+    "react-loader-spinner": "^6.1.6",
+    "react-modal": "^3.16.1",
+    "react-notification-system": "^0.4.0",
+    "react-router-dom": "^6.26.1",
+    "react-sanctum": "^3.0.0",
+    "react-spinners": "^0.14.1",
+    "react-toastify": "^10.0.5",
+    "react-top-loading-bar": "^2.3.1",
+    "sweetalert2": "^11.14.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "vite": "^5.4.1"
+  }
+}
