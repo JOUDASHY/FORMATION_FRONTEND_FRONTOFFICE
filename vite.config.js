@@ -12,11 +12,9 @@ export default defineConfig({
     host: '0.0.0.0',  // Écoute sur toutes les interfaces réseau
     port: 5174,        // Ou un autre port de votre choix
     open: true,        // Ouvre automatiquement le navigateur (optionnel)
+    historyApiFallback: true, // Permet le fallback vers index.html
   },
   build: {
     outDir: 'dist', // Le répertoire de sortie pour le build
-  },
-  server: {
-    historyApiFallback: true, // Permet le fallback vers index.html
   }
 });
