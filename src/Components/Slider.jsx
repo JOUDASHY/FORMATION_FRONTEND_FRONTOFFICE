@@ -15,7 +15,7 @@ const Slider = () => {
                                 <div className="col-lg-8">
                                     <div className="header-text">
                                         <h2>
-                                            Préparez-vous pour <em>votre carrière en informatique</em><br />&amp; améliorez <em>vos compétences</em>
+                                            Préparez------------------ pour <em>votre carrière en informatique</em><br />&amp; améliorez <em>vos compétences</em>
                                         </h2>
                                         <div className="div-dec"></div>
                                         <p>
