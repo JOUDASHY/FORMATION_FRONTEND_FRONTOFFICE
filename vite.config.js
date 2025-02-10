@@ -8,6 +8,7 @@ export default defineConfig({
     global: {},
   },
   build: {
+    sourcemap: false, 
     outDir: 'dist',
     rollupOptions: {
       input: {
